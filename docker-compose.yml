@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:13
+    container_name: db_act11
+    environment:
+      - POSTGRES_DB=SGE_act5
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
+    ports:
+      - "5432:5432"
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pg_act11
+    ports:
+      - "80:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 2024_yoon.lopez@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: pass
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+volumes:
+  local_pgdata:
+  pgadmin-data:
