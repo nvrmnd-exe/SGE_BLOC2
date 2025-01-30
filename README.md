@@ -28,3 +28,7 @@ I comprovem que funciona, executant el programa amb un print al final de la conn
 
 Aquest arxiu que hem creat ens servirà per establir la connexió amb la base de dades.
 
+A continuació, hem de configurar el docker, creant un arxiu anomenat `docker-compose.yml` amb el següent contingut:
+
+![img004](img/004.Docker.jpg)!(img/004)
+
