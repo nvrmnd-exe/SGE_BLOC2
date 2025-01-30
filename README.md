@@ -16,4 +16,8 @@ Dins de `postgresql_python`, desarem els arxius següents:
 - `read_registre.py`
 - `update_registre.py`
 
-[![img 001](img/001.jpg)]
+![img 001](img/001.jpg)
+
+A continuació, indiquem al `connect.py` les dades de la connexió a la base de dades.
+
+![img002](img/002.Connect.py.jpg)
