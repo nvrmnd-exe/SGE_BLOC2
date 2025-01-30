@@ -25,3 +25,6 @@ A continuació, indiquem al `connect.py` les dades de la connexió a la base de 
 I comprovem que funciona, executant el programa amb un print al final de la connexió `print(connection_db)`
 
 ![img003](img/003.ResultConnect.jpg))
+
+Aquest arxiu que hem creat ens servirà per establir la connexió amb la base de dades.
+
