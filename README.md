@@ -16,4 +16,19 @@ Dins de `postgresql_python`, desarem els arxius següents:
 - `read_registre.py`
 - `update_registre.py`
 
-[![img 001](img/001.jpg)]
+![img001](img/001.jpg)
+
+A continuació, indiquem al `connect.py` les dades de la connexió a la base de dades.
+
+![img002](img/002.Connect.py.jpg)
+
+I comprovem que funciona, executant el programa amb un print al final de la connexió `print(connection_db)`
+
+![img003](img/003.ResultConnect.jpg))
+
+Aquest arxiu que hem creat ens servirà per establir la connexió amb la base de dades.
+
+A continuació, hem de configurar el docker, creant un arxiu anomenat `docker-compose.yml` amb el següent contingut:
+
+![img004](img/004.Docker.jpg)!(img/004)
+

@@ -2,25 +2,22 @@ version: '3.1'
 services:
   db:
     image: postgres:13
-    container_name: db_act11
+    container_name: db_erp
     environment:
-      - POSTGRES_DB=SGE_act5
-      - POSTGRES_PASSWORD=pass
-      - POSTGRES_USER=user
+      - POSTGRES_DB=the_bear
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
     ports:
       - "5432:5432"
     volumes:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pg_act11
+    container_name: pg_erp
     ports:
       - "80:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: 2024_yoon.lopez@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: pass
+      PGADMIN_DEFAULT_EMAIL: admin@thebear.com
+      PGADMIN_DEFAULT_PASSWORD: carmy
     volumes:
       - pgadmin-data:/var/lib/pgadmin
-volumes:
-  local_pgdata:
-  pgadmin-data:
