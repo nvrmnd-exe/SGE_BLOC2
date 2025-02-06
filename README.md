@@ -80,6 +80,53 @@ sudo docker rm <nom contenidor>
 
 Per **comprovar que funciona correctament**, entrem a pgadmin posant `localhost` al navegador, i s'hauria de mostrar la pàgina de pgadmin.
 
-![img006](img/006.%20pgadmin.jpg)
+![img006](img/006.pgadmin.jpg)
 
-Led credencials per accedir son les indicades a les línies del pgadmin del document `docker-compose.yml`.
+Les credencials per accedir son les indicades a les línies del pgadmin del document `docker-compose.yml`.
+
+![img007](img/007.pgadmin.jpg)
+
+### PASSAR DADES DE CSV A LA BASE DE DADES
+
+El que farem serà crear un script per passar les dades automàticament.
+
+El primer que haurem de fer serà descarregar-nos el fitxer anomenat `Clientes.csv` a una carpeta anomenada `send_data_to_db`.
+
+Dins de la mateixa carpeta, creem tres arxius:
+- `create_table_to_db.py`: crea la taula amb els camps segons el csv.
+- `csv_to_dict.py`: transforma la informació del csv en format diccionari.
+- `dict_to_db.py` inserta les dades del diccionari a la base de dades.
+
+El contingut de `create_table_to_db.py` ha de ser:
+```commandline
+import psycopg2
+
+def create_tables():
+    conn = psycopg2.connect(
+        database="the_bear",
+        password="admin",
+        user="admin",
+        host="localhost",
+        port="5432"
+    )
+
+    cursor = conn.cursor()
+
+    sql_clients = '''
+       CREATE TABLE Clientes (
+       Nombre_Cliente VARCHAR(100),
+       Dirección_Cliente VARCHAR(200),
+       Teléfono_Cliente VARCHAR(100),
+       Correo_Electrónico_Cliente VARCHAR(100),
+       Fecha_Cumpleaños VARCHAR(50));'''
+
+    cursor.execute(sql_clients)
+
+    conn.commit()
+
+    conn.close()
+    cursor.close()
+
+    return {"Tables created successfully"}
+```
+

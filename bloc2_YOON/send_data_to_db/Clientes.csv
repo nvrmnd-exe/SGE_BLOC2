@@ -1,0 +1,31 @@
+Nombre_Cliente,Dirección_Cliente,Teléfono_Cliente ,Correo_Electrónico_Cliente,Fecha_Cumpleaños
+Roger,Carrer de Balmes 127,612345678,roger@example.com,1990-05-15
+Juan Manuel,Avinguda Diagonal 456,612987654,juanmanuel@example.com,1985-11-22
+Josep Oriol,Carrer de Provença 223,613456789,joseporiol@example.com,2000-03-07
+Mireia,Rambla de Catalunya 89,614567890,mireia@example.com,1978-09-30
+Alba,Carrer de Mallorca 312,615678901,alba@example.com,1995-12-11
+Miquel,Passeig de Gràcia 55,616789012,miquel@example.com,1982-06-25
+Martin,Carrer de Valencia 201,617890123,martin@example.com,1993-08-14
+Miquel Angel,Carrer de Muntaner 342,618901234,miquelangel@example.com,1987-01-19
+Carlota,Avinguda Meridiana 678,619012345,carlota@example.com,2002-04-03
+Andreu,Carrer de Aragó 145,620123456,andreu@example.com,1980-10-06
+David,Carrer de Consell de Cent 267,621234567,david@example.com,1997-07-22
+Maria,Ronda de Sant Pere 33,622345678,maria@example.com,1975-02-18
+Marta,Carrer de Córdoba 189,623456789,marta@example.com,1989-11-05
+Montse,Avinguda de la Meridiana 512,624567890,montse@example.com,1983-06-09
+Vivian,Carrer de Sardenya 76,625678901,vivian@example.com,2001-12-27
+Xavier,Passeig Marítim 44,626789012,xavier@example.com,1976-04-16
+Antonio,Carrer de Marina 289,627890123,antonio@example.com,1992-09-01
+Sara,Avinguda de Roma 167,628901234,sara@example.com,1988-03-13
+Pep,Carrer de Padilla 234,629012345,pep@example.com,1998-05-29
+Albert,Rambla del Poblenou 56,630123456,albert@example.com,1981-10-17
+Carla,Carrer de Bailèn 112,631234567,carla@example.com,1994-07-08
+Mariona,Avinguda Diagonal 789,632345678,mariona@example.com,1979-01-24
+Laura,Carrer de Sicília 301,633456789,laura@example.com,2003-11-16
+Leonard,Passeig de Sant Joan 67,634567890,leonard@example.com,1986-08-02
+Marina,Carrer de Rosselló 245,635678901,marina@example.com,1991-04-20
+Anna,Avinguda Meridiana 423,636789012,anna@example.com,1977-12-05
+Valeria,Carrer de Casp 178,637890123,valeria@example.com,1996-06-11
+Veronica,Ronda de Sant Antoni 92,638901234,veronica@example.com,1984-02-28
+Estefania,Carrer de Lepant 256,639012345,estefania@example.com,1999-09-23
+Aleix,Avinguda de Gaudí 34,640123456,aleix@example.com,1973-07-07
