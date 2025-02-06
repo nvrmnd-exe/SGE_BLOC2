@@ -181,3 +181,62 @@ Això significa que s'ha executat correctament, i ho comprovem veient la base de
 
 Després, executem `csv_to_dict.py` i de nou, veurem com finalitza amb exit code 0. Veiem que s'ha fet de nou, des de pgadmin. Aquest, dins del seu programa, ja executa l'altre arxiu, pel que no cal fer-ho manualment.
 ![img009](img/009.csvdict.jpg)
+
+### CREAR REGISTRE
+
+Obrim l'arxiu `create_registre.py` i posem el següent codi, per crear un registre a la taula `clientes`:
+```commandline
+import connect
+
+def create_reg():
+
+   conn = connect.connection_db()
+   cursor = conn.cursor()
+
+   sql_create = "INSERT INTO Clientes (nombre_cliente, dirección_cliente, teléfono_cliente, correo_electrónico_cliente, fecha_cumpleaños) VALUES (%s, %s, %s, %s, %s);"
+
+   values=('Yoon', 'carrer el que sigui', '657893093', 'yoon@correu.com', '21_10_2002')
+
+   cursor.execute(sql_create, values)
+
+   conn.commit()
+
+   conn.close()
+   cursor.close()
+```
+
+Per provar que el codi sigui correcte, hem d'inserir el següent codi a `main.py` i executar-lo.
+```commandline
+import create_registre as cr
+
+cr.create_reg()
+```
+En executar-lo, hauriem de veure el registre que hem creat a la taula.
+![img010](img/010.registre.jpg)
+
+### LLEGIR REGISTRE
+Un cop hem afegit les dades del punt anterior, hem de posar el codi a la resta d'arxius.
+
+Contingut `read_registre.py`:
+```commandline
+import connect
+
+def read_reg():
+    conn = connect.connection_db()
+    cursor = conn.cursor()
+
+    sql_red = "SELECT * FROM clientes2"
+
+    cursor.execute(sql_red)
+    conn.commit()
+
+    results = cursor.fetchall()
+    
+    return results
+```
+Quan ja hem posat el codi, hem d'extreure la informació de la llista creada per poder mirar la informació amb una trucada dins de `main.py`.
+
+### EXTREURE INFORMACIÓ D'UNA LLISTA
+Per veure totes les dades, hem d'imprimir els resultats de l'arxiu `read_registre.py`.
+![011.jpg](img/011.jpg)
+
