@@ -172,3 +172,12 @@ def csv_to_dict():
 
     return {"M"}
 ```
+
+Comprovem que funciona executant els dos primers arxius creats.
+
+En executar `create_table_to_db.py`, al terminal sortirà que s'ha executat el procés amb exit code 0.
+Això significa que s'ha executat correctament, i ho comprovem veient la base de dades creada al pgadmin.
+![img008](img/008.create.jpg)
+
+Després, executem `csv_to_dict.py` i de nou, veurem com finalitza amb exit code 0. Veiem que s'ha fet de nou, des de pgadmin. Aquest, dins del seu programa, ja executa l'altre arxiu, pel que no cal fer-ho manualment.
+![img009](img/009.csvdict.jpg)

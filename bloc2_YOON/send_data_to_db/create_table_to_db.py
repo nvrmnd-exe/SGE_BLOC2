@@ -27,3 +27,5 @@ def create_tables():
     cursor.close()
 
     return {"Tables created successfully"}
+
+create_tables()
