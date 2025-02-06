@@ -248,3 +248,9 @@ Podem mostrar el resultat de només un client amb cert id.
 print(results[4])
 ```
 ![012.jpg](img/012.jpg)
+
+Si volem mostrar un camp concret, hem d'indicar el número de camp de l'usuari
+```commandline
+print(results[4][2])
+```
+![013.jpg](img/013.jpg)
