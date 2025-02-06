@@ -238,5 +238,13 @@ Quan ja hem posat el codi, hem d'extreure la informació de la llista creada per
 
 ### EXTREURE INFORMACIÓ D'UNA LLISTA
 Per veure totes les dades, hem d'imprimir els resultats de l'arxiu `read_registre.py`.
+```commandline
+print(results)
+```
 ![011.jpg](img/011.jpg)
 
+Podem mostrar el resultat de només un client amb cert id.
+```commandline
+print(results[4])
+```
+![012.jpg](img/012.jpg)
